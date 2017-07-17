@@ -1,0 +1,25 @@
+digraph G {
+	graph [center=1 rankdir=LR bgcolor="#808080"]
+	edge [dir=none]
+	node [width=0.3 height=0.3 label=""]
+	{ node [shape=circle]
+		n00 n10 n20 n30 n40
+	}
+	{ node [shape=diamond]
+		n01 n11 n21 n31 n41
+	}
+	{ node [shape=square]
+		n02 n12 n22 n32 n42
+	}
+	{ node [shape=triangle]
+		n03 n13 n23 n33 n43
+	}
+	{ node [shape=ellipse]
+		n04 n14 n24 n34 n44
+	}
+	{ edge [color="#ffffff"]
+		n00 -> n01
+		n00 -> n10
+		n00 -> n11
+	}
+}
