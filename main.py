@@ -7,9 +7,6 @@ def main():
     rows = int(sys.argv[2])
     edgesFilename = sys.argv[3]
     G=nx.Graph()
-    for c in range(cols):
-        for r in range(rows):
-            G.add_node('n'+str(r)+str(c))
 
     lines = []
     with open(edgesFilename) as fHandle:
@@ -22,11 +19,10 @@ def main():
         G.add_edge(n1,n2)
 
     triangles = set()
-    for c in range(cols):
-        for r in range(rows):
-            triangles |= trianglesFromNode(G,'n'+str(r)+str(c))
+    for n in G.nodes():
+        triangles |= trianglesFromNode(G,n)
     print(len(triangles))
-    render(G,cols,rows,'triangles.gv')
+    render(G,'triangles.gv')
 
 
 def trianglesFromNode(graph,node):
@@ -55,7 +51,7 @@ def trianglesFromNode(graph,node):
     return triangles
 
 
-def render(G,cols,rows,filename):
+def render(G,filename):
     boilerplateBegin = '''
 digraph G {
 	graph [center=1 rankdir=LR bgcolor="#808080"]
@@ -84,10 +80,9 @@ digraph G {
 '''
     with open(filename,'w') as fHandle:
         fHandle.write(boilerplateBegin)
-        for c in range(cols):
-            for r in range(rows):
-                for edge in G.edges('n'+str(r)+str(c)):
-                    fHandle.write('		%s -> %s\n' % edge)
+        for n in G.nodes():
+            for edge in G.edges(n):
+                fHandle.write('		%s -> %s\n' % edge)
         fHandle.write(boilerplateEnd)
         fHandle.close()
 
