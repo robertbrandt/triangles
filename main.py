@@ -1,5 +1,7 @@
 import networkx as nx
 import sys
+from pprint import pprint
+from copy import copy
 
 
 def main():
@@ -22,7 +24,44 @@ def main():
     for n in G.nodes():
         triangles |= trianglesFromNode(G,n)
     print(len(triangles))
-    render(G,'triangles.gv')
+    #render(G,'triangles.gv')
+    txtGrid = []
+    blankRow = [' ' for i in range((2*cols)-1)] # we don't need right-most empty cells
+    for r in range(rows):
+        row = []
+        for c in range(cols):
+            #row.append("n"+str(r)+str(c))
+            row.append('o')
+            if c != (cols-1):
+                row.append(' ')
+        txtGrid.append(row)
+        if r != (rows-1):
+            txtGrid.append(blankRow.copy())
+    for triangle in triangles:
+        renderTriangle(txtGrid,triangle)
+        return
+
+
+def isTriangleLegal(n1,n2,n3):
+    '''
+    detect if three edges lie in a straight line
+    take two pairs of nodes, get slope, and if equal then it's a straight line
+    '''
+    #r1,c1 = __coordsFromNode(n1,1)
+    #r2,c2 = __coordsFromNode(n2,1)
+    #r3,c3 = __coordsFromNode(n3,1)
+    #m1 = 0 if (c2-c1)==0 else (r2-r1)/(c2-c1)
+    #m2 = 0 if (c3-c2)==0 else (r3-r2)/(c3-c2)
+    #return m1 != m2
+    rise1,run1 = __slope(n1,n2)
+    rise2,run2 = __slope(n2,n3)
+    if run1==0 and run2==0:
+        return False
+    if run1==0 or run2==0:
+        return True
+    if (rise1/run1) == (rise2/run2):
+        return False
+    return True
 
 
 def trianglesFromNode(graph,node):
@@ -47,8 +86,62 @@ def trianglesFromNode(graph,node):
                 n3 = e3[1] if e3[0] == n2 else e3[0]
                 if n3 != node or n3 == n1 or n3 == n2:
                     continue
-                triangles.add(frozenset(sorted([node,n1,n2])))
+                if isTriangleLegal(n1,n2,n3):
+                    triangles.add(frozenset(sorted([node,n1,n2])))
     return triangles
+
+
+def renderTriangle(txtGrid,triangle):
+    triangle = list(triangle)
+    print(triangle)
+    nodePairs = [(0,1),(0,2),(1,2)]
+    for i,j in nodePairs:
+        n1,n2 = triangle[i],triangle[j]
+        print("%s,%s" % (n1,n2))
+        r1,c1 = __coordsFromNode(n1,2)
+        r2,c2 = __coordsFromNode(n2,2)
+        txtGrid[r1][c1] = '*'
+        txtGrid[r2][c2] = '*'
+        if False and (r1!=r2) and (c1!=c2):
+            # it's a diagonal
+            print('diagonal')
+            mnR = min(r1,r2)
+            mxR = max(r1,r2)
+            mxC = max(c1,c2)
+            mnC = min(c1,c2)
+            while mnR <= mxR:
+                print('setting [%s][%s]' % (mnR,mnC))
+                txtGrid[mnR][mnC] = '*'
+                mnC += 1
+                mnR += 1
+        if True or (r1==r2):
+            # it's a horizontal
+            print('horizontal')
+            rise,run = __slope(n1,n2)
+            print('rise %s, run %s' % (rise,run))
+            _r1 = r1
+            _c1 = c1
+            while (_r1!=r2) or (_c1!=c2):
+                print('setting [%s][%s]' % (_r1,_c1))
+                txtGrid[_r1][_c1] = '*'
+                _r1 += rise
+                _c1 += run
+#            mnC = min(c1,c2)
+#            mxC = max(c1,c2)
+#            while mnC <= mxC:
+#                print('setting [%s][%s]' % (r1,mnC))
+#                txtGrid[r1][mnC] = '*'
+#                mnC += 1
+        if False and (c1==c2):
+            # it's a vertical
+            print('vertical')
+            mnR = min(r1,r2)
+            mxR = max(r1,r2)
+            while mnR <= mxR:
+                print("setting [%s][%s]" % (mnR,c1))
+                txtGrid[mnR][c1] = '*'
+                mnR += 1
+    pprint(txtGrid)
 
 
 def render(G,filename):
@@ -85,6 +178,44 @@ digraph G {
                 fHandle.write('		%s -> %s\n' % edge)
         fHandle.write(boilerplateEnd)
         fHandle.close()
+
+
+def __slope(n1,n2):
+    '''
+    returns the slope of the line connecting two points n1,n2
+    we don't want to deal with infinity so we return a tuple of
+    the rise,run
+    '''
+    r1,c1 = __coordsFromNode(n1,1)
+    r2,c2 = __coordsFromNode(n2,1)
+    rise = r2-r1
+    run  = c2-c1
+#    if rise < 0 and run < 0:
+#        return -rise,-run
+    same = rise == run
+    if rise == 0 or same:
+        if run > 1:
+            run = 1
+        if run < 1:
+            run = -1
+    if run == 0 or same:
+        if rise > 1:
+            rise = 1
+        if rise < -1:
+            rise = -1
+    
+    return rise,run
+
+
+def __coordsFromNode(node,scale):
+    '''
+    node is a str in form of n01 or n22
+    generally it's nRC where R==row and C==col
+    returns r,c tuple
+    scale is an int multiplier where 1 is par, 2 is 2x
+    i.e. scale=2 with n21 would return 4,2
+    '''
+    return (int(node[1])*scale,int(node[2])*scale)
 
 
 if __name__ == '__main__':
