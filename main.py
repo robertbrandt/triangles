@@ -1,6 +1,5 @@
 import networkx as nx
 import sys
-from pprint import pprint
 from copy import copy
 
 
@@ -78,6 +77,11 @@ def trianglesFromNode(graph,node):
     return triangles
 
 
+def gridPrint(txtGrid):
+    for line in txtGrid:
+        print(''.join(line))
+
+
 def renderTriangle(txtGrid,triangle):
     triangle = list(triangle)
     print(triangle)
@@ -86,16 +90,19 @@ def renderTriangle(txtGrid,triangle):
         n1,n2 = triangle[i],triangle[j]
         r1,c1 = __coordsFromNode(n1,2)
         r2,c2 = __coordsFromNode(n2,2)
+        #print('writing %s,%s' % (r1,c1))
+        #print('writing %s,%s' % (r2,c2))
         txtGrid[r1][c1] = '*'
         txtGrid[r2][c2] = '*'
         rise,run = __slope(n1,n2)
         _r1 = r1
         _c1 = c1
         while (_r1!=r2) or (_c1!=c2):
+            #print('writing %s,%s with rise %s and run %s' % (_r1,_c1,rise,run))
             txtGrid[_r1][_c1] = '*'
             _r1 += rise
             _c1 += run
-    pprint(txtGrid)
+    gridPrint(txtGrid)
 
 
 def __slope(n1,n2):
@@ -108,7 +115,7 @@ def __slope(n1,n2):
     r2,c2 = __coordsFromNode(n2,1)
     rise = r2-r1
     run  = c2-c1
-    same = rise == run
+    same = abs(rise) == abs(run)
     if rise == 0 or same:
         if run > 1:
             run = 1
