@@ -4,10 +4,9 @@ from copy import copy
 
 
 def main():
-    cols = int(sys.argv[1])
-    rows = int(sys.argv[2])
-    edgesFilename = sys.argv[3]
-    G=nx.Graph()
+    maxCol = maxRow = 0
+    edgesFilename = sys.argv[1]
+    G = nx.Graph()
 
     lines = []
     with open(edgesFilename) as fHandle:
@@ -18,6 +17,10 @@ def main():
             continue
         n1,n2 = line.split(',')
         G.add_edge(n1,n2)
+        for n in [n1,n2]:
+            r,c = __coordsFromNode(n,1)
+            if r > maxRow: maxRow = r
+            if c > maxCol: maxCol = c
 
     triangles = set()
     for n in G.nodes():
@@ -29,7 +32,7 @@ def main():
     for node in sorted(G.nodes()):
         for triangle in triangles:
             if node in triangle and triangle not in displayedTriangles:
-                txtGrid = __makeGrid(cols,rows)
+                txtGrid = __makeGrid(maxCol+1,maxRow+1)
                 renderTriangle(txtGrid,triangle)
                 displayedTriangles.add(triangle)
 
