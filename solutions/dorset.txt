@@ -1,0 +1,961 @@
+96
+['n00', 'n30', 'n33']
+* o o o o
+**       
+* * o o o
+*  *     
+* o * o o
+*    *   
+******* o
+         
+o o o o o
+['n00', 'n02', 'n20']
+***** o o
+*  *     
+* * o o o
+**       
+* o o o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n20', 'n11']
+* o o o o
+**       
+* * o o o
+**       
+* o o o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n20', 'n22']
+* o o o o
+**       
+* * o o o
+*  *     
+***** o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n01', 'n11']
+*** o o o
+ **      
+o * o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n44', 'n04']
+*********
+ *      *
+o * o o *
+   *    *
+o o * o *
+     *  *
+o o o * *
+       **
+o o o o *
+['n00', 'n04', 'n40']
+*********
+*      * 
+* o o * o
+*    *   
+* o * o o
+*  *     
+* * o o o
+**       
+* o o o o
+['n00', 'n10', 'n11']
+* o o o o
+**       
+*** o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n02', 'n11']
+***** o o
+ * *     
+o * o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n02', 'n22']
+***** o o
+ *  *    
+o * * o o
+   **    
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n44', 'n40']
+* o o o o
+**       
+* * o o o
+*  *     
+* o * o o
+*    *   
+* o o * o
+*      * 
+*********
+['n00', 'n22', 'n40']
+* o o o o
+**       
+* * o o o
+*  *     
+* o * o o
+*  *     
+* * o o o
+**       
+* o o o o
+['n00', 'n22', 'n04']
+*********
+ *     * 
+o * o * o
+   * *   
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n00', 'n03', 'n33']
+******* o
+ *    *  
+o * o * o
+   *  *  
+o o * * o
+     **  
+o o o * o
+         
+o o o o o
+['n01', 'n11', 'n02']
+o *** o o
+  **     
+o * o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n01', 'n04', 'n31']
+o *******
+  *    * 
+o * o * o
+  *  *   
+o * * o o
+  **     
+o * o o o
+         
+o o o o o
+['n02', 'n03', 'n13']
+o o *** o
+     **  
+o o o * o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n22', 'n24']
+o o * o o
+    **   
+o o * * o
+    *  * 
+o o *****
+         
+o o o o o
+         
+o o o o o
+['n20', 'n02', 'n24']
+o o * o o
+   * *   
+o * o * o
+ *     * 
+*********
+         
+o o o o o
+         
+o o o o o
+['n02', 'n13', 'n11']
+o o * o o
+   * *   
+o ***** o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n22', 'n04']
+o o *****
+    *  * 
+o o * * o
+    **   
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n24', 'n04']
+o o *****
+     *  *
+o o o * *
+       **
+o o o o *
+         
+o o o o o
+         
+o o o o o
+['n13', 'n02', 'n04']
+o o *****
+     * * 
+o o o * o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n13', 'n12']
+o o * o o
+    **   
+o o *** o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n20', 'n02', 'n42']
+o o * o o
+   **    
+o * * o o
+ *  *    
+* o * o o
+ *  *    
+o * * o o
+   **    
+o o * o o
+['n02', 'n22', 'n13']
+o o * o o
+    **   
+o o * * o
+    **   
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n11', 'n12']
+o o * o o
+   **    
+o *** o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n22', 'n11']
+o o * o o
+   **    
+o * * o o
+   **    
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n20', 'n02', 'n22']
+o o * o o
+   **    
+o * * o o
+ *  *    
+***** o o
+         
+o o o o o
+         
+o o o o o
+['n02', 'n42', 'n24']
+o o * o o
+    **   
+o o * * o
+    *  * 
+o o * o *
+    *  * 
+o o * * o
+    **   
+o o * o o
+['n13', 'n03', 'n04']
+o o o ***
+      ** 
+o o o * o
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n22', 'n44', 'n04']
+o o o o *
+       **
+o o o * *
+     *  *
+o o * o *
+     *  *
+o o o * *
+       **
+o o o o *
+['n13', 'n24', 'n04']
+o o o o *
+       **
+o o o * *
+       **
+o o o o *
+         
+o o o o o
+         
+o o o o o
+['n44', 'n04', 'n40']
+o o o o *
+       **
+o o o * *
+     *  *
+o o * o *
+   *    *
+o * o o *
+ *      *
+*********
+['n22', 'n24', 'n04']
+o o o o *
+       **
+o o o * *
+     *  *
+o o *****
+         
+o o o o o
+         
+o o o o o
+['n34', 'n04', 'n31']
+o o o o *
+       **
+o o o * *
+     *  *
+o o * o *
+   *    *
+o *******
+         
+o o o o o
+['n13', 'n04', 'n14']
+o o o o *
+       **
+o o o ***
+         
+o o o o o
+         
+o o o o o
+         
+o o o o o
+['n10', 'n13', 'n40']
+o o o o o
+         
+******* o
+*    *   
+* o * o o
+*  *     
+* * o o o
+**       
+* o o o o
+['n20', 'n10', 'n11']
+o o o o o
+         
+*** o o o
+**       
+* o o o o
+         
+o o o o o
+         
+o o o o o
+['n20', 'n22', 'n11']
+o o o o o
+         
+o * o o o
+ * *     
+***** o o
+         
+o o o o o
+         
+o o o o o
+['n20', 'n11', 'n31']
+o o o o o
+         
+o * o o o
+ **      
+* * o o o
+ **      
+o * o o o
+         
+o o o o o
+['n22', 'n13', 'n11']
+o o o o o
+         
+o ***** o
+   * *   
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n44', 'n11', 'n14']
+o o o o o
+         
+o *******
+   *    *
+o o * o *
+     *  *
+o o o * *
+       **
+o o o o *
+['n22', 'n21', 'n11']
+o o o o o
+         
+o * o o o
+  **     
+o *** o o
+         
+o o o o o
+         
+o o o o o
+['n22', 'n11', 'n12']
+o o o o o
+         
+o *** o o
+   **    
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n33', 'n13', 'n11']
+o o o o o
+         
+o ***** o
+   *  *  
+o o * * o
+     **  
+o o o * o
+         
+o o o o o
+['n22', 'n11', 'n31']
+o o o o o
+         
+o * o o o
+  **     
+o * * o o
+  **     
+o * o o o
+         
+o o o o o
+['n20', 'n21', 'n11']
+o o o o o
+         
+o * o o o
+ **      
+*** o o o
+         
+o o o o o
+         
+o o o o o
+['n44', 'n41', 'n11']
+o o o o o
+         
+o * o o o
+  **     
+o * * o o
+  *  *   
+o * o * o
+  *    * 
+o *******
+['n13', 'n11', 'n31']
+o o o o o
+         
+o ***** o
+  *  *   
+o * * o o
+  **     
+o * o o o
+         
+o o o o o
+['n33', 'n11', 'n31']
+o o o o o
+         
+o * o o o
+  **     
+o * * o o
+  *  *   
+o ***** o
+         
+o o o o o
+['n22', 'n13', 'n12']
+o o o o o
+         
+o o *** o
+    **   
+o o * o o
+         
+o o o o o
+         
+o o o o o
+['n22', 'n24', 'n13']
+o o o o o
+         
+o o o * o
+     * * 
+o o *****
+         
+o o o o o
+         
+o o o o o
+['n23', 'n22', 'n13']
+o o o o o
+         
+o o o * o
+     **  
+o o *** o
+         
+o o o o o
+         
+o o o o o
+['n24', 'n13', 'n14']
+o o o o o
+         
+o o o ***
+       **
+o o o o *
+         
+o o o o o
+         
+o o o o o
+['n22', 'n13', 'n33']
+o o o o o
+         
+o o o * o
+     **  
+o o * * o
+     **  
+o o o * o
+         
+o o o o o
+['n23', 'n24', 'n13']
+o o o o o
+         
+o o o * o
+      ** 
+o o o ***
+         
+o o o o o
+         
+o o o o o
+['n43', 'n13', 'n40']
+o o o o o
+         
+o o o * o
+     **  
+o o * * o
+   *  *  
+o * o * o
+ *    *  
+******* o
+['n24', 'n13', 'n33']
+o o o o o
+         
+o o o * o
+      ** 
+o o o * *
+      ** 
+o o o * o
+         
+o o o o o
+['n13', 'n33', 'n31']
+o o o o o
+         
+o o o * o
+     **  
+o o * * o
+   *  *  
+o ***** o
+         
+o o o o o
+['n20', 'n21', 'n31']
+o o o o o
+         
+o o o o o
+         
+*** o o o
+ **      
+o * o o o
+         
+o o o o o
+['n20', 'n42', 'n40']
+o o o o o
+         
+o o o o o
+         
+* o o o o
+**       
+* * o o o
+*  *     
+***** o o
+['n20', 'n22', 'n31']
+o o o o o
+         
+o o o o o
+         
+***** o o
+ * *     
+o * o o o
+         
+o o o o o
+['n20', 'n40', 'n31']
+o o o o o
+         
+o o o o o
+         
+* o o o o
+**       
+* * o o o
+**       
+* o o o o
+['n20', 'n42', 'n24']
+o o o o o
+         
+o o o o o
+         
+*********
+ *     * 
+o * o * o
+   * *   
+o o * o o
+['n20', 'n30', 'n31']
+o o o o o
+         
+o o o o o
+         
+* o o o o
+**       
+*** o o o
+         
+o o o o o
+['n20', 'n22', 'n40']
+o o o o o
+         
+o o o o o
+         
+***** o o
+*  *     
+* * o o o
+**       
+* o o o o
+['n42', 'n20', 'n22']
+o o o o o
+         
+o o o o o
+         
+***** o o
+ *  *    
+o * * o o
+   **    
+o o * o o
+['n22', 'n21', 'n31']
+o o o o o
+         
+o o o o o
+         
+o *** o o
+  **     
+o * o o o
+         
+o o o o o
+['n22', 'n24', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o *****
+     * * 
+o o o * o
+         
+o o o o o
+['n42', 'n22', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+   **    
+o * * o o
+   **    
+o o * o o
+['n22', 'n32', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+    **   
+o o *** o
+         
+o o o o o
+['n42', 'n22', 'n44']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+    **   
+o o * * o
+    *  * 
+o o *****
+['n22', 'n44', 'n40']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+   * *   
+o * o * o
+ *     * 
+*********
+['n42', 'n22', 'n40']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+   **    
+o * * o o
+ *  *    
+***** o o
+['n23', 'n22', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o *** o
+     **  
+o o o * o
+         
+o o o o o
+['n42', 'n22', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+    **   
+o o * * o
+    **   
+o o * o o
+['n22', 'n32', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+   **    
+o *** o o
+         
+o o o o o
+['n42', 'n22', 'n24']
+o o o o o
+         
+o o o o o
+         
+o o *****
+    *  * 
+o o * * o
+    **   
+o o * o o
+['n22', 'n44', 'n24']
+o o o o o
+         
+o o o o o
+         
+o o *****
+     *  *
+o o o * *
+       **
+o o o o *
+['n22', 'n33', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o * o o
+   * *   
+o ***** o
+         
+o o o o o
+['n23', 'n24', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o ***
+      ** 
+o o o * o
+         
+o o o o o
+['n44', 'n24', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o *
+       **
+o o o * *
+       **
+o o o o *
+['n34', 'n24', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o *
+       **
+o o o ***
+         
+o o o o o
+['n42', 'n44', 'n24']
+o o o o o
+         
+o o o o o
+         
+o o o o *
+       **
+o o o * *
+     *  *
+o o *****
+['n30', 'n40', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+*** o o o
+**       
+* o o o o
+['n42', 'n33', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o ***** o
+   * *   
+o o * o o
+['n41', 'n40', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o * o o o
+ **      
+*** o o o
+['n42', 'n40', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o * o o o
+ * *     
+***** o o
+['n42', 'n41', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o * o o o
+  **     
+o *** o o
+['n42', 'n32', 'n31']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o *** o o
+   **    
+o o * o o
+['n42', 'n32', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o *** o
+    **   
+o o * o o
+['n43', 'n42', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o * o
+     **  
+o o *** o
+['n34', 'n44', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o ***
+       **
+o o o o *
+['n43', 'n44', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o * o
+      ** 
+o o o ***
+['n42', 'n44', 'n33']
+o o o o o
+         
+o o o o o
+         
+o o o o o
+         
+o o o * o
+     * * 
+o o *****
